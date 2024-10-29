@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --link-color: #1d4ed8; /* Default link color */
+  --link-hover-color: #2563eb; /* Link hover color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --link-color: #60a5fa; /* Link color in dark mode */
+    --link-hover-color: #93c5fd; /* Link hover color in dark mode */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Poppins";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway";
+}
+
+.footer {
+  @apply bg-gray-800 text-white p-4;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Raleway";
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* New classes for the Header component */
+.header {
+  @apply bg-gray-800 text-white p-4;
+}
+
+.nav {
+  @apply flex flex-wrap justify-between items-center;
+}
+
+.nav-brand {
+  @apply text-lg font-bold mb-2 md:mb-0;
+}
+
+.nav-list {
+  @apply flex flex-wrap space-x-4;
+}
+
+.nav-item {
+  @apply mb-2 md:mb-0;
+}
+
+.nav-link {
+  @apply hover:underline;
+  color: var(--link-color);
+}
+
+.nav-link:hover {
+  color: var(--link-hover-color);
+}
